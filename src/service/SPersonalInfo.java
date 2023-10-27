@@ -35,12 +35,10 @@ public class SPersonalInfo extends Stub{
 		this.saveVPersonalInfo(vPersonalInfo);
 		this.saveSPersonalInfo();
 		
-		this.sendForSend(sendList);
+		this.send(sendList);
+		System.out.println(sendList.get(0));
 	}
 	
-	public String getObjectName() {
-		return "sPersonalInfo";
-	}
 
 
 }
