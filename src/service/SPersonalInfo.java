@@ -25,7 +25,7 @@ public class SPersonalInfo extends Stub{
 		sendList.add(vPersonalInfo.getName());
 	}
 	
-	public void saveSPersonalInfo() {
+	public void saveWriteMethod() {
 		sendList.add("sPersonalInfo");
 		sendList.add("write");
 		sendList.add("");
@@ -33,7 +33,7 @@ public class SPersonalInfo extends Stub{
 	
 	public void sendPersonalInfo(VPersonalInfo vPersonalInfo) {
 		this.saveVPersonalInfo(vPersonalInfo);
-		this.saveSPersonalInfo();
+		this.saveWriteMethod();
 		
 		this.send(sendList);
 		System.out.println(sendList.get(0));

@@ -6,7 +6,7 @@ public class CMain {
 	public void run() {
 //		View view = new View();
 //		view.showUserInfo();
-		
+	
 		PMainUI pmain = new PMainUI();
 		pmain.show();
 	}

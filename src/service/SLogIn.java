@@ -24,7 +24,7 @@ public class SLogIn extends Stub {
 		sendList.add(vLogIn.getPassword());
 	}
 	
-	public void saveSLogInInfo() {
+	public void saveValidateMethod() {
 		sendList.add("sLogIn");
 		sendList.add("validate");
 		sendList.add("");
@@ -46,7 +46,7 @@ public class SLogIn extends Stub {
 	
 	public VPersonalInfo sendLogInInfo(VLogIn vLogIn) {
 		this.saveVLogInInfo(vLogIn);
-		this.saveSLogInInfo();
+		this.saveValidateMethod();
 		
 		VPersonalInfo vPersonalInfo = this.receivedValueObject(this.send(sendList));
 		return vPersonalInfo;

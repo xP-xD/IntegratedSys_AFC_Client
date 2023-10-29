@@ -1,12 +1,13 @@
 package valueObject;
 
 //Value object
-public class VPersonalInfo {
+public class VPersonalInfo{
 
 	private String id;
 	private String password;
 	private String name;
-
+	
+	
 	public String getId() {
 		return id;
 	}
@@ -30,10 +31,4 @@ public class VPersonalInfo {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public String getObjectName() {
-		// TODO Auto-generated method stub
-		return "vPersonalInfo";
-	}
-	
 }

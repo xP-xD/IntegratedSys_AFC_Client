@@ -12,23 +12,24 @@ public class PMainUI {
 		Scanner scanner = new Scanner(System.in);
 		
 		VPersonalInfo vPersonalInfo = this.login(scanner);
-//		if (vPersonalInfo != null) {
-//			this.applicationForClasses(scanner, vPersonalInfo);
-//		} else {
-//			this.terminate();
-//		}
+		if (vPersonalInfo != null) {
+			this.applicationForClasses(scanner, vPersonalInfo);
+		} else {
+			this.terminate();
+		}
 
 		scanner.close();
 	}
 
 	private void terminate() {
+		
 	}
 
-//	private void applicationForClasses(Scanner scanner, VPersonalInfo vPersonalInfo) {
-//		PApplicationForClasses pApplicationForClasses = new PApplicationForClasses();
-//		pApplicationForClasses.show(scanner, vPersonalInfo);
-//
-//	}
+	private void applicationForClasses(Scanner scanner, VPersonalInfo vPersonalInfo) {
+		PApplicationForClasses pApplicationForClasses = new PApplicationForClasses();
+		pApplicationForClasses.show(scanner, vPersonalInfo);
+
+	}
 
 	private VPersonalInfo login(Scanner scanner) {
 
