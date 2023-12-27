@@ -1,8 +1,12 @@
 package valueObject;
 
-//Value object
-public class VPersonalInfo{
+import java.io.Serializable;
 
+//Value object
+public class VPersonalInfo implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
 	private String id;
 	private String password;
 	private String name;

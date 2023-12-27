@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 import valueObject.VPersonalInfo;
 
-public class PMainUI {
+public class PConsoleUI {
 //==View
 	
-	public void show() {
-		Scanner scanner = new Scanner(System.in);
+	public void show(Scanner scanner){
+//		Scanner scanner = new Scanner(System.in);
 		
 		VPersonalInfo vPersonalInfo = this.login(scanner);
 		if (vPersonalInfo != null) {
@@ -18,7 +18,7 @@ public class PMainUI {
 			this.terminate();
 		}
 
-		scanner.close();
+//		scanner.close();
 	}
 
 	private void terminate() {
@@ -31,7 +31,7 @@ public class PMainUI {
 
 	}
 
-	private VPersonalInfo login(Scanner scanner) {
+	private VPersonalInfo login(Scanner scanner){
 
 		System.out.println("수강신청 사이트입니다. 어떤 작업을 하실지 선택해주세요");
 		VPersonalInfo vPersonalInfo = null;
@@ -60,12 +60,13 @@ public class PMainUI {
 				} 
 				else {
 					System.out.println("");
-					System.out.println("다시 로그인 해주세요.");
+					System.out.println("로그인 정보가 잘못 되었습니다. 다시 로그인 해주세요.");
 					System.out.println("");
 				}
 			} else if (selection == 3) {
-				System.out.println("");
 				finished = true;
+				System.out.println("작업을 종료합니다.");
+				System.exit(0);
 			} else {
 				System.out.println("1, 2, 3번 중에서 선택해주세요.");
 				System.out.println("");

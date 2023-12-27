@@ -74,6 +74,8 @@ public class PApplicationForClasses {
 				fileName = "root";
 			} else if (selection == 3) {
 				finished = true;
+				System.out.println("작업을 종료합니다.");
+				System.exit(0);
 			} else {
 				System.out.println("1,2,3번중에 선택해주세요.");
 			}

@@ -7,9 +7,11 @@ import valueObject.VPersonalInfo;
 public class PPersonalInfo {
 	
 	private SPersonalInfo sPersonalInfo;
+	private VPersonalInfo vPersonalInfo;
 	
 	public PPersonalInfo() {
 		sPersonalInfo = new SPersonalInfo();
+		vPersonalInfo = new VPersonalInfo();
 	}
 	
 	public void show(Scanner scanner) {
@@ -17,17 +19,14 @@ public class PPersonalInfo {
 		//개인정보 입력창 표출
 		//개인정보 수집
 		
-		//new valueObject
-		VPersonalInfo vPersonalInfo = new VPersonalInfo();
-		
 		System.out.print("ID를 입력하세요: ");
-		vPersonalInfo.setId(scanner.next());
+		this.vPersonalInfo.setId(scanner.next());
 		System.out.print("Password를 입력하세요: ");
-		vPersonalInfo.setPassword(scanner.next());
+		this.vPersonalInfo.setPassword(scanner.next());
 		System.out.print("Name를 입력하세요: ");
-		vPersonalInfo.setName(scanner.next());
+		this.vPersonalInfo.setName(scanner.next());
 
-		sPersonalInfo.sendPersonalInfo(vPersonalInfo);
+		System.out.println(this.sPersonalInfo.write(vPersonalInfo));
 		
 	}
 

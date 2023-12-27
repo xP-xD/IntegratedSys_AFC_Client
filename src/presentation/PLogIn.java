@@ -12,24 +12,24 @@ public class PLogIn{
 	private VLogIn vLogIn;
 	
 	public PLogIn() {
-		sLogIn = new SLogIn();
-		vLogIn = new VLogIn();
+		this.sLogIn = new SLogIn();
+		this.vLogIn = new VLogIn();
 	}
 	
 	public void login() {
 		
 	}
 	
-	public VPersonalInfo show(Scanner scanner) {
+	public VPersonalInfo show(Scanner scanner){
 		
 		System.out.println("아이디, 비밀번호를 입력하세요.");
 		
 		System.out.print("ID: ");
-		vLogIn.setId(scanner.next());
+		this.vLogIn.setId(scanner.next());
 		System.out.print("Password: ");
-		vLogIn.setPassword(scanner.next());
+		this.vLogIn.setPassword(scanner.next());
 		
-		return sLogIn.sendLogInInfo(vLogIn);
+		return sLogIn.validate(this.vLogIn);
 	}
 
 }

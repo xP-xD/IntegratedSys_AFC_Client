@@ -1,7 +1,11 @@
 package valueObject;
 
-public class VLecture{
+import java.io.Serializable;
+
+public class VLecture implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+
 	//ID 과목명 교수명 학점 시간
 	private String fileName;
 	

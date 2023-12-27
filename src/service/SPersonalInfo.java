@@ -1,44 +1,24 @@
 package service;
-import java.util.ArrayList;
+
+import java.rmi.RemoteException;
 
 import valueObject.VPersonalInfo;
 
-public class SPersonalInfo extends Stub{
+public class SPersonalInfo extends Stub {
 
-	private ArrayList<String> sendList;
-	
 	public SPersonalInfo() {
-		sendList = new ArrayList<String>();
 	}
-	
-	public void saveVPersonalInfo(VPersonalInfo vPersonalInfo) {
-		sendList.add("vPersonalInfo");
-		sendList.add("setId");
-		sendList.add(vPersonalInfo.getId());
-		
-		sendList.add("vPersonalInfo");
-		sendList.add("setPassword");
-		sendList.add(vPersonalInfo.getPassword());
-		
-		sendList.add("vPersonalInfo");
-		sendList.add("setName");
-		sendList.add(vPersonalInfo.getName());
-	}
-	
-	public void saveWriteMethod() {
-		sendList.add("sPersonalInfo");
-		sendList.add("write");
-		sendList.add("");
-	}
-	
-	public void sendPersonalInfo(VPersonalInfo vPersonalInfo) {
-		this.saveVPersonalInfo(vPersonalInfo);
-		this.saveWriteMethod();
-		
-		this.send(sendList);
-		System.out.println(sendList.get(0));
-	}
-	
 
+	public String write(VPersonalInfo vPersonalInfo) {
+
+		String result = null;
+		try {
+			result = remoteObject.write(vPersonalInfo);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+	}
 
 }
